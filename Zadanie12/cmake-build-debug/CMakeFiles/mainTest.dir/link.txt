@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/mainTest.dir/test/test.cpp.o  -o mainTest  -L/home/student/Obiektowe/Zadanie12/../googletest/build/lib -Wl,-rpath,/home/student/Obiektowe/Zadanie12/../googletest/build/lib -lgtest -lgtest_main -lpthread libutils.a 

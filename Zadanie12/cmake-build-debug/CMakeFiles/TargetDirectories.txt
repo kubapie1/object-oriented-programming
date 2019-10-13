@@ -1,0 +1,5 @@
+/home/student/Obiektowe/Zadanie12/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/student/Obiektowe/Zadanie12/cmake-build-debug/CMakeFiles/utils.dir
+/home/student/Obiektowe/Zadanie12/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/student/Obiektowe/Zadanie12/cmake-build-debug/CMakeFiles/mainTest.dir
+/home/student/Obiektowe/Zadanie12/cmake-build-debug/CMakeFiles/main.dir
