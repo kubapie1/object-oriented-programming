@@ -1,2 +1,0 @@
-/usr/bin/ar qc lib02_tdd_lib.a  CMakeFiles/02_tdd_lib.dir/src/Dummy.cpp.o
-/usr/bin/ranlib lib02_tdd_lib.a

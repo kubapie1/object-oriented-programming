@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/02_tdd_test.dir/src/DummyTest.cpp.o CMakeFiles/02_tdd_test.dir/src/TextWrapperTest.cpp.o  -o 02_tdd_test  -L/home/student/Obiektowe/02_tdd/test/../../googletest/build/lib -Wl,-rpath,/home/student/Obiektowe/02_tdd/test/../../googletest/build/lib ../lib02_tdd_lib.a -lgtest -lgtest_main -lpthread 
