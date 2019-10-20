@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="02_tdd" targetName="02_tdd" />
+      <config projectName="02_tdd" targetName="02_tdd_test" />
+      <config projectName="02_tdd" targetName="02_tdd_lib" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="127c12e3-41a2-46b2-801e-9c65a7dedd95" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1SCMUg6wTkhaGgT7sWObQiYG6wT" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ZadanieDomowe/oop_2019_g2_jakub_piecuch/Zadanie21" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Google Test.All in 02_tdd_test">
+    <configuration name="All in 02_tdd_test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" nameIsGenerated="true" PASS_PARENT_ENVS_2="true" PROJECT_NAME="02_tdd" TARGET_NAME="02_tdd_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="02_tdd" RUN_TARGET_NAME="02_tdd_test" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="02_tdd" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="02_tdd" TARGET_NAME="02_tdd" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="02_tdd" RUN_TARGET_NAME="02_tdd">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="02_tdd_lib" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="02_tdd" TARGET_NAME="02_tdd_lib" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="02_tdd_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="02_tdd" TARGET_NAME="02_tdd_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="02_tdd" RUN_TARGET_NAME="02_tdd_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.02_tdd" />
+      <item itemvalue="CMake Application.02_tdd_lib" />
+      <item itemvalue="CMake Application.02_tdd_test" />
+      <item itemvalue="Google Test.All in 02_tdd_test" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="127c12e3-41a2-46b2-801e-9c65a7dedd95" name="Default Changelist" comment="" />
+      <created>1571063141755</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1571063141755</updated>
+      <workItem from="1571063145099" duration="4390000" />
+      <workItem from="1571241745149" duration="2443000" />
+      <workItem from="1571249739427" duration="5172000" />
+      <workItem from="1571258301632" duration="3425000" />
+      <workItem from="1571571911454" duration="322000" />
+      <workItem from="1571572946594" duration="647000" />
+      <workItem from="1571575729757" duration="55000" />
+    </task>
+    <task id="LOCAL-00001" summary="[refactor]">
+      <created>1571063961057</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1571063961057</updated>
+    </task>
+    <task id="LOCAL-00002" summary="[red] added test which checks InitializeConstructor">
+      <created>1571065064283</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571065064283</updated>
+    </task>
+    <task id="LOCAL-00003" summary="[green] added InitializeConstructor">
+      <created>1571065158017</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571065158017</updated>
+    </task>
+    <task id="LOCAL-00004" summary="[green] added Test which checks string receiving">
+      <created>1571066177218</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571066177218</updated>
+    </task>
+    <task id="LOCAL-00005" summary="[red] added Test which checks string substraction">
+      <created>1571067112468</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571067112468</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[refactor]">
+      <created>1571574004219</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571574004219</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="[red] added test which checks InitializeConstructor" />
+    <MESSAGE value="[green] added InitializeConstructor" />
+    <MESSAGE value="[green] added Test which checks string receiving" />
+    <MESSAGE value="[red] added Test which checks string substraction" />
+    <MESSAGE value="[refactor]" />
+    <option name="LAST_COMMIT_MESSAGE" value="[refactor]" />
+  </component>
+</project>
