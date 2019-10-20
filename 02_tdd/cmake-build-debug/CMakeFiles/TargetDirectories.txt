@@ -1,7 +1,0 @@
-/home/student/Obiektowe/02_tdd/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/student/Obiektowe/02_tdd/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/student/Obiektowe/02_tdd/cmake-build-debug/CMakeFiles/02_tdd_lib.dir
-/home/student/Obiektowe/02_tdd/cmake-build-debug/CMakeFiles/02_tdd.dir
-/home/student/Obiektowe/02_tdd/cmake-build-debug/test/CMakeFiles/rebuild_cache.dir
-/home/student/Obiektowe/02_tdd/cmake-build-debug/test/CMakeFiles/02_tdd_test.dir
-/home/student/Obiektowe/02_tdd/cmake-build-debug/test/CMakeFiles/edit_cache.dir
