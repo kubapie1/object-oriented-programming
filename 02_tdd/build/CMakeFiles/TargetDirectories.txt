@@ -1,0 +1,7 @@
+/home/student/CLionProjects/02_tdd/build/CMakeFiles/rebuild_cache.dir
+/home/student/CLionProjects/02_tdd/build/CMakeFiles/edit_cache.dir
+/home/student/CLionProjects/02_tdd/build/CMakeFiles/02_tdd_lib.dir
+/home/student/CLionProjects/02_tdd/build/CMakeFiles/02_tdd.dir
+/home/student/CLionProjects/02_tdd/build/test/CMakeFiles/rebuild_cache.dir
+/home/student/CLionProjects/02_tdd/build/test/CMakeFiles/02_tdd_test.dir
+/home/student/CLionProjects/02_tdd/build/test/CMakeFiles/edit_cache.dir

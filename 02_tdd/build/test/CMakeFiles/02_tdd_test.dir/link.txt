@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/02_tdd_test.dir/src/DummyTest.cpp.o  -o 02_tdd_test  -L/home/student/CLionProjects/02_tdd/test/../../googletest/build/lib -Wl,-rpath,/home/student/CLionProjects/02_tdd/test/../../googletest/build/lib ../lib02_tdd_lib.a -lgtest -lgtest_main -lpthread 

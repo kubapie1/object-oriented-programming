@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/Dummy.h
+string
+-
+
+/home/student/CLionProjects/02_tdd/src/main.cpp
+iostream
+-
+Dummy.h
+/home/student/CLionProjects/02_tdd/src/Dummy.h
+

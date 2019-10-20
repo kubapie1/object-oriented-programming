@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/TextWrapper.h
+string
+-
+sstream
+-
+vector
+-
+
+/home/student/Obiektowe/02_tdd/src/TextWrapper.cpp
+TextWrapper.h
+/home/student/Obiektowe/02_tdd/src/TextWrapper.h
+
