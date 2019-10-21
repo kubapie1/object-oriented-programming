@@ -3,6 +3,8 @@
 // TODO: ...
 #include <vector>
 #include <list>
+#include <queue>
+#include <deque>
 
 TEST(VectorInt, CreateInitialized) {
 
@@ -313,10 +315,11 @@ TEST(ForwardListFloat, InsertElementAfterIndex) {
     EXPECT_EQ(4, *(iter++));
     EXPECT_EQ(forwardList.end(), iter);
 }
-/*
+
 TEST(DequeInt, RemoveFirstElement) {
 
     // TODO: ...
+    std::deque<int> deque = {1, 2, 3};
 
     ASSERT_EQ(3u, deque.size());
     EXPECT_FLOAT_EQ(1, deque[0]);
@@ -324,12 +327,12 @@ TEST(DequeInt, RemoveFirstElement) {
     EXPECT_FLOAT_EQ(3, deque[2]);
 
     // TODO: ...
-
+    deque.pop_front();
     ASSERT_EQ(2u, deque.size());
     EXPECT_FLOAT_EQ(2, deque[0]);
     EXPECT_FLOAT_EQ(3, deque[1]);
 }
-
+/*
 TEST(StackInt, PushAndPop) {
 
     // TODO: ...
