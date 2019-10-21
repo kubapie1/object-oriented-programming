@@ -5,6 +5,7 @@
 #include <list>
 #include <queue>
 #include <deque>
+#include <stack>
 
 TEST(VectorInt, CreateInitialized) {
 
@@ -332,28 +333,32 @@ TEST(DequeInt, RemoveFirstElement) {
     EXPECT_FLOAT_EQ(2, deque[0]);
     EXPECT_FLOAT_EQ(3, deque[1]);
 }
-/*
+
 TEST(StackInt, PushAndPop) {
 
     // TODO: ...
+    std::stack<int> stack;
 
     EXPECT_TRUE(stack.empty());
 
     // TODO: ...
+    stack.push(1);
+    stack.push(2);
 
     ASSERT_EQ(2u, stack.size());
     EXPECT_EQ(2, stack.top());
 
     // TODO: ...
-
+    stack.pop();
     ASSERT_EQ(1u, stack.size());
     EXPECT_EQ(1, stack.top());
 
     // TODO: ...
-
+    stack.pop();
     ASSERT_EQ(0u, stack.size());
 }
 
+/*
 TEST(PriorityQueueChar, PushAndPop) {
 
     // TODO: ...
