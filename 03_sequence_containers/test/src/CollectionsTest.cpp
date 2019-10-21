@@ -138,7 +138,7 @@ TEST(VectorVectorVectorFloat, ThreeDimensionalVector) {
             vector<float> vec1d;
             vect[i].push_back(vec1d);
             for( int k = 0; k < 2; k++)
-                vect[j][k].push_back(howMany++);
+                vect[i][j].push_back(howMany++);
         }
     }
 
@@ -300,6 +300,10 @@ TEST(ForwardListFloat, InsertElementAfterIndex) {
 
     // TODO: ...
 
+    iter = forwardList.begin();
+    *(iter++);
+    *(iter++);
+    forwardList.insert(iter, 10);
 
     iter = forwardList.begin();
     EXPECT_EQ(1, *(iter++));
