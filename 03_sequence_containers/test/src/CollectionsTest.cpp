@@ -1,10 +1,11 @@
 #include "TestIncludes.h"
 
 // TODO: ...
+#include <vector>
 
 TEST(VectorInt, CreateInitialized) {
 
-    // TODO: ...
+    std::vector<int> vector{ 1, 2, 3};
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_EQ(1, vector[0]);
@@ -26,7 +27,7 @@ TEST(VectorDouble, CreateEmptyAndAddValuesAtTheEnd) {
     EXPECT_DOUBLE_EQ(13, vector[1]);
     EXPECT_DOUBLE_EQ(17, vector[2]);
 }
-
+/*
 TEST(VectorFloat, CreateUsingInitializerList) {
 
     // TODO: ...
@@ -325,3 +326,4 @@ TEST(PriorityQueueChar, PushAndPop) {
 
     ASSERT_TRUE(priority_queue.empty());
 }
+*/
