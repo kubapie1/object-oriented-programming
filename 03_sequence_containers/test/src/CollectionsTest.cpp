@@ -121,7 +121,7 @@ TEST(VectorFloat, EraseFrontValue) {
     EXPECT_FLOAT_EQ(2, vector[0]);
     EXPECT_FLOAT_EQ(3, vector[1]);
 }
-/*
+
 TEST(VectorVectorVectorFloat, ThreeDimensionalVector) {
 
     using namespace std;
@@ -160,7 +160,7 @@ TEST(VectorVectorVectorFloat, ThreeDimensionalVector) {
     EXPECT_FLOAT_EQ(7, vect[1][1][0]);
     EXPECT_FLOAT_EQ(8, vect[1][1][1]);
 }
-*/
+
 
 
 TEST(ArrayInt, FillWithTheSameValue) {
