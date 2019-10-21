@@ -33,8 +33,8 @@ TEST(VectorDouble, CreateEmptyAndAddValuesAtTheEnd) {
 
 TEST(VectorFloat, CreateUsingInitializerList) {
 
-//    std::initializer_list<float> initializerList = { 10, 20, 30};
-  //  std::vector<float> vector {initializerList};
+    std::initializer_list<float> initializerList = { 10, 20, 30};
+    std::vector<float> vector {initializerList};
 
     ASSERT_EQ(3u, vector.size());
     EXPECT_FLOAT_EQ(10, vector[0]);
