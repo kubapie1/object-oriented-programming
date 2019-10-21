@@ -74,7 +74,7 @@ TEST(VectorInt, SizeShouldBeLessThanOrEqualToCapacity) {
     ASSERT_EQ(4u, vector.size());
     EXPECT_EQ(vector.capacity(), vector.size());
 }
-/*
+
 TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
 
     // TODO: ...
@@ -97,7 +97,7 @@ TEST(VectorFloat, CopyToOtherVectorUsingAssign) {
     EXPECT_EQ(2, input[1]);
     EXPECT_EQ(3, input[2]);
 }
-
+/*
 TEST(VectorFloat, EraseFrontValue) {
 
     // TODO: ...
