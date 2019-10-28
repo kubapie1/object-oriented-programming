@@ -258,7 +258,7 @@ TEST(MapStringString, CreateUsingInitializerList) {
     EXPECT_EQ("Greece", map["GR"]);
     EXPECT_EQ("France", map["FR"]);
 }
-/*
+
 TEST(MapMapStringInt, NestedCollections) {
 
     // TODO: ....
@@ -276,7 +276,7 @@ TEST(MapMapStringInt, NestedCollections) {
     EXPECT_EQ(2, map["count"]["3"]);
     EXPECT_EQ(7, map["count"]["4"]);
 }
-
+/*
 TEST(MultisetInt, RemoveRangeOfElements) {
 
     // TODO: ....
