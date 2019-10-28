@@ -117,18 +117,25 @@ TEST(SetInt, InvalidComparatorThatCausesOnlyOneElementToBeInserted) {
 
     struct Comparator {
         // TODO: ....
+        bool operator()(const int& lhs, const int& rhs) const
+        {
+            //if( !( lhs<rhs ) && ( lhs > rhs ) )
+            if( rhs )return false; // jezeli sie pojawia cos po prawej to dajemy
+        }
     };
 
     // TODO: ....
+    std::set<int, Comparator> set{};
 
     ASSERT_TRUE(set.empty());
 
     // TODO: ....
+    set.insert(1);
 
     ASSERT_EQ(1u, set.size());
 
     // TODO: ....
-
+    set.insert(10);
     ASSERT_EQ(1u, set.size());
 }
 /*
