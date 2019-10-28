@@ -223,7 +223,7 @@ TEST(SetValue, CustomTypeAndComparator) {
     EXPECT_EQ(1u, set.count(Value{3, 3}));
     EXPECT_EQ(1u, set.count(Value{6, 6}));
 }
-/*
+
 TEST(SetInt, ElementsGreaterThanGivenValue) {
 
     // TODO: ....
@@ -242,7 +242,7 @@ TEST(SetInt, ElementsGreaterThanGivenValue) {
     EXPECT_EQ(5, *iter++);
     EXPECT_EQ(set.end(), iter);
 }
-
+/*
 TEST(MapStringString, CreateUsingInitializerList) {
 
     // TODO: ....
