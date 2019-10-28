@@ -112,7 +112,7 @@ TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
     EXPECT_EQ(set.end(), iter);
 
 }
-/*
+
 TEST(SetInt, InvalidComparatorThatCausesOnlyOneElementToBeInserted) {
 
     struct Comparator {
@@ -131,7 +131,7 @@ TEST(SetInt, InvalidComparatorThatCausesOnlyOneElementToBeInserted) {
 
     ASSERT_EQ(1u, set.size());
 }
-
+/*
 TEST(SetInt, InvalidComparatorThatCausesMultipleCopiesOfTheSameElementToBeInserted) {
 
     struct Comparator {
