@@ -1,18 +1,42 @@
 #include "TestIncludes.h"
 
 // TODO: ....
+#include <set>
+#include <unordered_set>
+
+TEST( Dummy, Test)
+{
+    struct Foo{};
+    struct FooComparator // a < b
+    {
+        bool operator()(const Foo& lhs, const Foo& rhs) const { return false; }
+    };
+    std::set<Foo, FooComparator> set{};
+
+    struct FooHash // hash
+    {
+        std::size_t operator()(const Foo& foo) const noexcept { return 0; }
+    };
+
+    struct FooEqual // a == b
+    {
+        bool operator()(const Foo& lhs, const Foo& rhs) const { return false; }
+    };
+    std::unordered_set<Foo, FooHash, FooEqual> unorderedSet{};
+
+}
 
 TEST(SetInt, RemoveElements) {
 
     // TODO: ....
-
+    std::set<int> set{1,2,3};
     ASSERT_EQ(3u, set.size());
     EXPECT_EQ(1u, set.count(1));
     EXPECT_EQ(1u, set.count(2));
     EXPECT_EQ(1u, set.count(3));
 
     // TODO: ....
-
+    set.erase(2);
     ASSERT_EQ(2u, set.size());
     EXPECT_EQ(1u, set.count(1));
     EXPECT_EQ(0u, set.count(2));
@@ -22,16 +46,22 @@ TEST(SetInt, RemoveElements) {
 TEST(SetDouble, ElementsSortedWhenIterating) {
 
     // TODO: ....
+    std::set<double> set{};
 
     ASSERT_TRUE(set.empty());
 
     // TODO: ....
+    set.insert(3.3);
+    set.insert(2.2);
 
     ASSERT_EQ(2u, set.size());
     EXPECT_EQ(1u, set.count(3.3));
     EXPECT_EQ(1u, set.count(2.2));
 
     // TODO: ....
+    set.insert(4.4);
+    set.insert(1.1);
+
     ASSERT_EQ(4u, set.size());
     EXPECT_EQ(1u, set.count(3.3));
     EXPECT_EQ(1u, set.count(2.2));
@@ -39,7 +69,7 @@ TEST(SetDouble, ElementsSortedWhenIterating) {
     EXPECT_EQ(1u, set.count(1.1));
 
     // TODO: ....
-
+    set.insert(0.0);
     auto iter = set.begin();
     EXPECT_EQ(0.0, *iter++);
     EXPECT_EQ(1.1, *iter++);
@@ -51,9 +81,15 @@ TEST(SetDouble, ElementsSortedWhenIterating) {
 
 TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
 
-    struct Comparator {
-        // TODO: ....
+    struct Comparator{
+        bool operator()(const std::string& lhs, const std::string& rhs) const
+        {
+            //if( !( lhs<rhs ) && ( lhs > rhs ) )
+            if( lhs > rhs )return true;
+        }
     };
+
+    std::set<std::string, Comparator> set{"Aa", "Ab", "Ba", "Bb"};
 
     // TODO: ....
 
@@ -65,7 +101,8 @@ TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
     EXPECT_EQ(set.end(), iter);
 
     // TODO: ....
-
+    set.insert("Ca");
+    set.insert("Aa");
     iter = set.begin();
     EXPECT_EQ("Ca", *iter++);
     EXPECT_EQ("Bb", *iter++);
@@ -75,7 +112,7 @@ TEST(SetString, ElementsSortedInReversedAplhabeticalOrderWhenIterating) {
     EXPECT_EQ(set.end(), iter);
 
 }
-
+/*
 TEST(SetInt, InvalidComparatorThatCausesOnlyOneElementToBeInserted) {
 
     struct Comparator {
@@ -309,3 +346,4 @@ TEST(UnorderedSetInt, BucketsAndLoadFactor) {
     EXPECT_EQ(11u, unordered_set.bucket_count());
     EXPECT_FLOAT_EQ(11.0 / 11.0, unordered_set.load_factor());
 }
+*/
