@@ -262,11 +262,15 @@ TEST(MapStringString, CreateUsingInitializerList) {
 TEST(MapMapStringInt, NestedCollections) {
 
     // TODO: ....
-
+    std::map<std::string, std::map<std::string, int>> map{};
     ASSERT_TRUE(map.empty());
 
     // TODO: ....
-
+    map["count"] = {{"1", 12},
+                    {"2", 4},
+                    {"3", 2},
+                    {"4", 7}
+                    };
     ASSERT_EQ(1u, map.size());
     ASSERT_EQ(1u, map.count("count"));
 
@@ -276,10 +280,20 @@ TEST(MapMapStringInt, NestedCollections) {
     EXPECT_EQ(2, map["count"]["3"]);
     EXPECT_EQ(7, map["count"]["4"]);
 }
-/*
+
 TEST(MultisetInt, RemoveRangeOfElements) {
 
     // TODO: ....
+    std::multiset<int> multiset;
+
+    multiset.insert(1);
+
+    for (int i = 0; i < 12; ++i)
+    {
+        multiset.insert(2);
+        if(i<3)
+            multiset.insert(3);
+    }
 
     ASSERT_EQ(16, multiset.size());
     EXPECT_EQ(1, multiset.count(1));
@@ -287,6 +301,8 @@ TEST(MultisetInt, RemoveRangeOfElements) {
     EXPECT_EQ(3, multiset.count(3));
 
     // TODO: ....
+    auto range = multiset.equal_range(2);
+    multiset.erase( range.first, range.second);
 
     ASSERT_EQ(4, multiset.size());
     EXPECT_EQ(1, multiset.count(1));
@@ -333,7 +349,7 @@ TEST(UnorderedSetValue, CustomTypeHashAndComparator) {
     EXPECT_EQ(1u, unordered_set.count(Value{2, 1, 2}));
     EXPECT_EQ(1u, unordered_set.count(Value{2, 2, 2}));
 }
-
+/*
 TEST(UnorderedSetInt, BucketsAndLoadFactor) {
 
     // TODO: ....
