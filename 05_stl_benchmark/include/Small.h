@@ -29,7 +29,7 @@ struct Small {
     bool operator==(const Small &rhs) const {
 
         // TODO: Implement me!
-       // return (this->data[0] == rhs.data[0]);
+        return (this->data[0] == rhs.data[0]);
     }
 };
 
