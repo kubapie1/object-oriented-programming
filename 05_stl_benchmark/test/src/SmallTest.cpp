@@ -113,3 +113,21 @@ TEST(SmallTest, Clear) {
 
 
 // TODO: Add tests for your operators implementation!
+TEST(SmallTest,LowerOperator)
+{
+    Small small{'a'};
+    Small small1{'b'};
+
+   // small.data[0] = 'a';
+  //  small1.data[0] = 'b';
+
+    ASSERT_EQ(true,small < small1);
+}
+
+TEST(SmallTest, EqualOperator)
+{
+    Small small1{'a'};
+    Small small2{'a'};
+
+    ASSERT_EQ(true, small1==small2);
+}
