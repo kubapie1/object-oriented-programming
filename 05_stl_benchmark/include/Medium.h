@@ -23,6 +23,10 @@ struct Medium {
     bool operator<(const Medium &rhs) const {
 
         // TODO: Implement me!
+        for (int i = 0; i < sizeof(this->data); i++)
+        {
+            //funkcja ktora porównuje tablice???
+        }
         return false;
     }
 
