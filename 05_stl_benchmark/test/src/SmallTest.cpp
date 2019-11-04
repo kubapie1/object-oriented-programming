@@ -131,3 +131,10 @@ TEST(SmallTest, EqualOperator)
 
     ASSERT_EQ(true, small1==small2);
 }
+
+TEST(SmallTest, HashOperator)
+{
+    Small small{'a'};
+    auto smallTest = std::hash<Small>{}(small);
+    ASSERT_EQ('a', smallTest);
+}
