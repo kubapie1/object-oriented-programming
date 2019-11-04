@@ -7,7 +7,7 @@ static void Dummy_Integrate(State& state) {
 
     for (auto _ : state) {
 
-        auto integral = dummy.integrate(0, state.range(0));
+        auto integral = dummy.integrate(0, state.range(0)); //i tu bedziemy cos liczyc i benchmark to sobie policzy ile zeszlo itd..
 
         DoNotOptimize(integral);
     }
@@ -16,3 +16,4 @@ static void Dummy_Integrate(State& state) {
 }
 
 BENCHMARK(Dummy_Integrate)->RangeMultiplier(2)->Range(1<<5, 1<<18)->Complexity();
+//to zakres w jakim benchmark sie odpala. Zaczynamy od 2 i lecimy potegami 2
