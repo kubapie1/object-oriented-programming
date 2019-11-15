@@ -106,3 +106,11 @@ TEST(MediumTest, Clear) {
 }
 
 // TODO: Add tests for your operators implementation!
+
+TEST( MediumTest, LessThanOperator)
+{
+    Medium medium1{'abcd'};
+    Medium medium2{'bbcd'};
+
+    ASSERT_EQ(true, medium1<medium2);
+}
