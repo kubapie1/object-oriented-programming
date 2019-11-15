@@ -22,7 +22,7 @@ struct Medium {
 
     bool operator<(const Medium &rhs) const {
 
-        for (int i = 0; i < sizeof(this->data); i++)
+        for (int i = 0; i < SIZE; i++)
         {
             if( this->data[i] != rhs.data[i])
                 return (this->data[i] < rhs.data[i]);
@@ -31,7 +31,7 @@ struct Medium {
     }
 
     bool operator==(const Medium &rhs) const {
-        for (int i = 0; i < sizeof(this->data); i++)
+        for (int i = 0; i < SIZE; i++)
         {
             if( this->data[i] != rhs.data[i])
                 return false;

@@ -109,8 +109,8 @@ TEST(MediumTest, Clear) {
 
 TEST( MediumTest, LessThanOperator)
 {
-    Medium medium1{1,2 ,3};
-    Medium medium2{1,2, 4};
+    Medium medium1{1,2 ,4332};
+    Medium medium2{1,2, 4333};
     //medium1.randomize();
     //medium2.randomize();
 
@@ -119,8 +119,8 @@ TEST( MediumTest, LessThanOperator)
 
 TEST( MediumTest, EqualOperator )
 {
-    Medium medium1{1,2,3};
-    Medium medium2{ 1,2,3};
+    Medium medium{1,1,1,2,9999};
+    Medium medium2{1,1,1,2,9999 };
 
-    ASSERT_EQ( true, medium1 == medium2 );
+    ASSERT_EQ( true, medium == medium2 );
 }
