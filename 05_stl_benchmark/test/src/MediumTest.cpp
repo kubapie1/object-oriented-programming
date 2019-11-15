@@ -116,3 +116,11 @@ TEST( MediumTest, LessThanOperator)
 
     ASSERT_EQ(true, medium1 < medium2);
 }
+
+TEST( MediumTest, EqualOperator )
+{
+    Medium medium1{1,2,3};
+    Medium medium2{ 1,2,3};
+
+    ASSERT_EQ( true, medium1 == medium2 );
+}
