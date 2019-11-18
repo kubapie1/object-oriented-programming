@@ -2,7 +2,51 @@ TODO: Create class diagram...
 
 @startuml
 
-class Foo {
+class Observable {
+    {field}-std::set<Observer*> observers
+    {method}+void registerObserver(Observer*)
+    {method}+void unregisterObserver(Observer*)
+    {method}#void notifyObservers(float)
+
 }
+note right of Observable: for(Observer* observer : observers)\n\tobserver->notify(value);
+
+interface Observer{
+    {method}+void notify(float)
+}
+
+class Displacement{
+    -float value
+    +void set(float)
+}
+
+Observable "1" o-- "*" Observer
+Observable <|-- Displacement
+
+class Acceleration{
+    {field}-bool hasFirstValue
+    {field}-bool hasSecondValue
+    {field}-bool hasThirdValue
+    {field}-float firstValue
+    {field}-float secondValue
+    {field}-float thirdValue
+    {method}+float get()
+}
+
+Observer <|-- Acceleration
+Displacement <.. Acceleration : observes
+
+class Speed{
+    {field}-bool hasFirstValue
+    {field}-bool hasSecondValue
+    {field}-float firstValue
+    {field}-float secondValue
+    {method}+float get()
+}
+
+Observer <|-- Speed
+Displacement <.. Speed : observes
+
+
 
 @enduml
