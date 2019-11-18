@@ -7,4 +7,3 @@
 float Speed::get() {
     return 0;
 }
-

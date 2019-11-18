@@ -1,11 +1,8 @@
-//
-// Created by student on 18.11.2019.
-//
 
 
 
 
-/*TEST(Displacement, Oberver_...)
+/*TEST(Displacement, Observer_...)
 {
     Displacement displacement;
 

@@ -10,7 +10,8 @@ void Observable::unregisterObserver(Observer *)
 
 }
 
-void Observable::notifyObservers(float)
+void Observable::notifyObservers(float value)
 {
-
+    for( Observer* observer : observers)
+        observer->notify(value);
 }

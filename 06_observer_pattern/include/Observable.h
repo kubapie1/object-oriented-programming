@@ -3,20 +3,18 @@
 
 #include <set>
 #include "Observer.h"
-#include "Displacement.h"
 
 
 //jest to "AGREGACJA" Z OBSERVER
 
-class Observable : public Observer, public Displacement{
-
+class Observable {
 private:
     std::set<Observer*> observers;
 public:
     void registerObserver(Observer*);
     void unregisterObserver(Observer*);
 protected:
-    void notifyObservers(float);    //ta pętla
+    void notifyObservers(float value);    //ta pętla
 };
 
 #endif //INC_06_OBSERVER_PATTERN_OBSERVABLE_H
