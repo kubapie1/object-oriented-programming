@@ -4,6 +4,8 @@
 
 #include "Displacement.h"
 
-void Displacement::set(float) {
+
+void Displacement::set(float val) {
+    this->value = val;
 
 }

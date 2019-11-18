@@ -11,7 +11,7 @@ class Displacement : public Observable {
 private:
     float value;
 public:
-    void set(float);
+    void set(float val);
 };
 
 #endif //INC_06_OBSERVER_PATTERN_DISPLACEMENT_H

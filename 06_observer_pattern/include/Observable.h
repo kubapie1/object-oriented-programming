@@ -11,8 +11,8 @@ class Observable {
 private:
     std::set<Observer*> observers;
 public:
-    void registerObserver(Observer*);
-    void unregisterObserver(Observer*);
+    void registerObserver(Observer* observer);
+    void unregisterObserver(Observer* observer);
 protected:
     void notifyObservers(float value);    //ta pętla
 };
