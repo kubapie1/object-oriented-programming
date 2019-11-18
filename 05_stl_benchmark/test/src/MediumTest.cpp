@@ -124,3 +124,11 @@ TEST( MediumTest, EqualOperator )
 
     ASSERT_EQ( true, medium == medium2 );
 }
+
+TEST( MediumTest, HashOperator )
+{
+    Medium medium{15, 21, 33, 54,
+                  58, 67, 76, 82, 95};
+    Medium testMedium{};
+    ASSERT_EQ( true, testMedium == medium );
+}
