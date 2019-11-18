@@ -8,7 +8,7 @@
 
 #include "Observer.h"
 
-class Acceleration : public Observer{
+class Acceleration {
 private:
     bool hasFirstValue;
     bool hasSecondValue;

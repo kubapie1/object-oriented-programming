@@ -7,7 +7,7 @@
 
 #include "Observer.h"
 
-class Speed : public Observer{
+class Speed{
 private:
     bool hasFirstValue;
     bool hasSecondValue;
@@ -15,6 +15,6 @@ private:
     float secondValue;
 public:
     float get();
-}
+};
 
 #endif //INC_06_OBSERVER_PATTERN_SPEED_H

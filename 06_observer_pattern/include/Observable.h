@@ -3,10 +3,12 @@
 
 #include <set>
 #include "Observer.h"
+#include "Displacement.h"
+
 
 //jest to "AGREGACJA" Z OBSERVER
 
-class Observable{
+class Observable : public Observer, public Displacement{
 
 private:
     std::set<Observer*> observers;
