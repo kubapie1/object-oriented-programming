@@ -1,0 +1,8 @@
+TODO: Create class diagram...
+
+@startuml
+
+class Foo {
+}
+
+@enduml
