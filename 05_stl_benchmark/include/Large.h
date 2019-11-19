@@ -47,9 +47,12 @@ namespace std {
     template<>
     struct hash<Large> {
         std::size_t operator()(const Large &d) const {
-
-            // TODO: Implement me!
-            return 0;
+            size_t size=0;
+            for (int i = 0; i < Large::SIZE; i++)
+            {
+                size += hash<double>{}(d.data[i] + i);
+            }
+            return size;
         }
     };
 }

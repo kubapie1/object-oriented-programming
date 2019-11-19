@@ -125,3 +125,22 @@ TEST( LargeTest, EqualOperator)
 
     ASSERT_EQ(false, l1 == l2);
 }
+
+TEST(LargeTest, HashOperator)
+{
+    std::unordered_set<Large> unorderedSet{};
+
+    Large l1{};
+    Large l2{};
+    for (int i = 0; i < Large::SIZE; ++i)
+    {
+        l1.data[i] = i + 1.5;
+        l2.data[i] = (double)i + 2.5;
+    }
+
+    unorderedSet.insert(l1);
+    ASSERT_EQ(1u, unorderedSet.size());
+    ASSERT_EQ(l1, *unorderedSet.cbegin());
+    unorderedSet.insert(l2);
+    ASSERT_EQ(2u, unorderedSet.size());
+}

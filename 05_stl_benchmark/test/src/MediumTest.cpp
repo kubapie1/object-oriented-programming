@@ -132,8 +132,8 @@ TEST( MediumTest, HashOperator )
     Medium md2{};
     for (int i = 0; i <Medium::SIZE; ++i)
     {
-        md1.data[i] = i + 1;
-        md2.data[i] = i + 2;
+        md1.data[i] = i * 2;
+        md2.data[i] = i * 3;
     }
     unorderedSet.insert(md1);
 
