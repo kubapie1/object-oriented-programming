@@ -34,7 +34,11 @@ struct Large {
 
     bool operator==(const Large &rhs) const {
 
-        // TODO: Implement me!
+        for (int i = 0; i < SIZE; ++i)
+        {
+            if( this->data[i] != rhs.data[i] )
+                return false;
+        }
         return true;
     }
 };

@@ -117,3 +117,11 @@ TEST( LargeTest, LessThanOperator)
     Large l2 = {1.0, 2.0, 2.0};
     ASSERT_EQ(true, l2<l1);
 }
+
+TEST( LargeTest, EqualOperator)
+{
+    Large l1 = { 5.0, 2.0,3.0};
+    Large l2 = { 5.0, 2.0,3.0, 5.0};
+
+    ASSERT_EQ(false, l1 == l2);
+}
