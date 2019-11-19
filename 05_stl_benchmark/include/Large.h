@@ -22,9 +22,13 @@ struct Large {
         }
     }
 
-    bool operator<(const Large &rhs) const {
-
-        // TODO: Implement me!
+    bool operator<(const Large &rhs) const
+    {
+        for (int i = 0; i < SIZE; ++i)
+        {
+            if( this->data[i] != rhs.data[i])
+                return( this->data[i] < rhs.data[i]);
+        }
         return false;
     }
 
