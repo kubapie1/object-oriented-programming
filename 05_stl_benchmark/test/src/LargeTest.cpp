@@ -110,3 +110,10 @@ TEST(LargeTest, Clear) {
 
 
 // TODO: Add tests for your operators implementation!
+
+TEST( LargeTest, LessThanOperator)
+{
+    Large l1 = { 1.0, 2.0, 3.0};
+    Large l2 = {1.0, 2.0, 2.0};
+    ASSERT_EQ(true, l2<l1);
+}
