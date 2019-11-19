@@ -127,18 +127,9 @@ TEST( MediumTest, EqualOperator )
 
 TEST( MediumTest, HashOperator )
 {
-    std::unordered_set<Medium> unorderedSet{};
-    Medium md1{};
-    Medium md2{};
-    for (int i = 0; i <Medium::SIZE; ++i)
-    {
-        md1.data[i] = i * 2;
-        md2.data[i] = i * 3;
-    }
-    unorderedSet.insert(md1);
 
-    ASSERT_EQ(1u, unorderedSet.size());
-    ASSERT_EQ(md1, *unorderedSet.cbegin());
-    unorderedSet.insert(md2);
-    ASSERT_EQ(2u, unorderedSet.size());
+    Medium md1{1,2,3};
+
+    auto mediumHash = std::hash<Medium>{}(md1);
+    ASSERT_EQ(14, mediumHash);
 }

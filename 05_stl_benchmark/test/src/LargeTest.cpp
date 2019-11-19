@@ -128,7 +128,7 @@ TEST( LargeTest, EqualOperator)
 
 TEST(LargeTest, HashOperator)
 {
-    std::unordered_set<Large> unorderedSet{};
+/*    std::unordered_set<Large> unorderedSet{};
 
     Large l1{};
     Large l2{};
@@ -143,4 +143,9 @@ TEST(LargeTest, HashOperator)
     ASSERT_EQ(l1, *unorderedSet.cbegin());
     unorderedSet.insert(l2);
     ASSERT_EQ(2u, unorderedSet.size());
+*/
+    Large l1{1.0,2.0,3.0};
+
+    auto largeHash = std::hash<Large>{}(l1);
+    ASSERT_EQ(14.0, largeHash);
 }
