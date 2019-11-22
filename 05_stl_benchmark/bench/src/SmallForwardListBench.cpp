@@ -192,6 +192,7 @@ void smallForwardListMerge(State& state)
     {
         firstForwardList.merge(secondForwardList);
     }
+
 }
 
 BENCHMARK(smallForwardListMerge);
