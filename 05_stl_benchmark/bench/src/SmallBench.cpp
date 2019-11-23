@@ -34,8 +34,10 @@ BENCHMARK(smallEqualOperator);
 void smallHash( State& state )
 {
     Small small1{'a'};
+
     for(auto _ : state) {
-        std::hash<Small>{}(small1);
+        auto hash = std::hash<Small>{}(small1);
+        DoNotOptimize(hash);
     }
 }
 

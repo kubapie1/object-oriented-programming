@@ -4,7 +4,7 @@
 
 void SmallUnorderedSetEmpty(State& state)
 {
-
+    auto N = state.range(0);
     Small small{};
     small.randomize();
 
@@ -12,13 +12,16 @@ void SmallUnorderedSetEmpty(State& state)
     for(auto _ : state)
     {
         auto value = mySet.empty();
+        DoNotOptimize(value);
     }
+    state.SetComplexityN(N);
 }
 
-BENCHMARK(SmallUnorderedSetEmpty);
+BENCHMARK(SmallUnorderedSetEmpty)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void SmallUnorderedSetSize(State& state)
 {
+    auto N = state.range(0);
     Small small{};
     small.randomize();
     std::unordered_set<Small> mySet{small};
@@ -26,13 +29,16 @@ void SmallUnorderedSetSize(State& state)
     for(auto _ : state)
     {
         auto value = mySet.size();
+        DoNotOptimize(value);
     }
+    state.SetComplexityN(N);
 }
 
-BENCHMARK(SmallUnorderedSetSize);
+BENCHMARK(SmallUnorderedSetSize)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void SmallUnorderedSetMaxSize(State& state)
 {
+    auto N = state.range(0);
     Small small{};
     small.randomize();
     std::unordered_set<Small> mySet{small};
@@ -40,13 +46,16 @@ void SmallUnorderedSetMaxSize(State& state)
     for(auto _ : state)
     {
         auto value = mySet.max_size();
+        DoNotOptimize(value);
     }
+    state.SetComplexityN(N);
 }
 
-BENCHMARK(SmallUnorderedSetMaxSize);
+BENCHMARK(SmallUnorderedSetMaxSize)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void SmallUnorderedSetClear(State& state)
 {
+    auto N = state.range(0);
     Small small{};
     small.randomize();
     std::unordered_set<Small> mySet{small};
@@ -55,12 +64,14 @@ void SmallUnorderedSetClear(State& state)
     {
         mySet.clear();
     }
+    state.SetComplexityN(N);
 }
 
-BENCHMARK(SmallUnorderedSetClear);
+BENCHMARK(SmallUnorderedSetClear)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void SmallUnorderedSetInsert(State& state)
 {
+    auto N = state.range(0);
     Small small{};
     small.randomize();
     std::unordered_set<Small> mySet{};
@@ -68,13 +79,16 @@ void SmallUnorderedSetInsert(State& state)
     for(auto _ : state)
     {
         auto value = mySet.insert(small);
+        DoNotOptimize(value);
     }
+    state.SetComplexityN(N);
 }
 
-BENCHMARK(SmallUnorderedSetInsert);
+BENCHMARK(SmallUnorderedSetInsert)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void SmallUnorderedSetErase(State& state)
 {
+    auto N = state.range(0);
     Small small{};
     small.randomize();
     std::unordered_set<Small> mySet{small};
@@ -82,15 +96,20 @@ void SmallUnorderedSetErase(State& state)
     for (auto _ : state)
     {
         if(!mySet.empty())
-            mySet.erase(mySet.cbegin());
-        auto v = 1;
+        {
+            auto value = mySet.erase(mySet.cbegin());
+            DoNotOptimize(value);
+        }
+
     }
+    state.SetComplexityN(N);
 }
 
-BENCHMARK(SmallUnorderedSetErase);
+BENCHMARK(SmallUnorderedSetErase)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void SmallUnorderedSetSwap(State& state)
 {
+    auto N = state.range(0);
     Small small{};
     small.randomize();
 
@@ -104,12 +123,14 @@ void SmallUnorderedSetSwap(State& state)
     {
         mySet.swap(mySet2);
     }
+    state.SetComplexityN(N);
 }
 
-BENCHMARK(SmallUnorderedSetSwap);
+BENCHMARK(SmallUnorderedSetSwap)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void SmallUnorderedSetCount(State& state)
 {
+    auto N = state.range(0);
     Small small{};
     small.randomize();
 
@@ -118,15 +139,18 @@ void SmallUnorderedSetCount(State& state)
 
     for (auto _ : state)
     {
-        mySet.count(small);
+        auto value = mySet.count(small);
+        DoNotOptimize(value);
     }
+    state.SetComplexityN(N);
 }
 
-BENCHMARK(SmallUnorderedSetCount);
+BENCHMARK(SmallUnorderedSetCount)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 
 void SmallUnorderedSetFind(State& state)
 {
+    auto N = state.range(0);
     Small small{};
     small.randomize();
 
@@ -136,13 +160,16 @@ void SmallUnorderedSetFind(State& state)
     for (auto _ : state)
     {
         auto value = mySet.find(small);
+        DoNotOptimize(value);
     }
+    state.SetComplexityN(N);
 }
 
-BENCHMARK(SmallUnorderedSetFind);
+BENCHMARK(SmallUnorderedSetFind)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void SmallUnorderedSetEqualRange(State& state)
 {
+    auto N = state.range(0);
     Small small{};
     Small small1{};
     Small small2{};
@@ -158,13 +185,16 @@ void SmallUnorderedSetEqualRange(State& state)
     for (auto _ : state)
     {
         auto value = mySet.equal_range(small1);
+        DoNotOptimize(value);
     }
+    state.SetComplexityN(N);
 }
 
-BENCHMARK(SmallUnorderedSetEqualRange);
+BENCHMARK(SmallUnorderedSetEqualRange)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void SmallUnorderedSetRehash(State& state)
 {
+    auto N = state.range(0);
     Small small{};
     Small small1{};
     Small small2{};
@@ -179,12 +209,14 @@ void SmallUnorderedSetRehash(State& state)
     {
         mySet.rehash(4);
     }
+    state.SetComplexityN(N);
 }
 
-BENCHMARK(SmallUnorderedSetRehash);
+BENCHMARK(SmallUnorderedSetRehash)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void SmallUnorderedSetReserve(State& state)
 {
+    auto N = state.range(0);
     Small small{};
     Small small1{};
     Small small2{};
@@ -199,7 +231,8 @@ void SmallUnorderedSetReserve(State& state)
     {
         mySet.reserve(30);
     }
+    state.SetComplexityN(N);
 
 }
 
-BENCHMARK(SmallUnorderedSetReserve);
+BENCHMARK(SmallUnorderedSetReserve)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
