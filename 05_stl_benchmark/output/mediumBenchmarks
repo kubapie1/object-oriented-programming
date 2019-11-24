@@ -1,0 +1,81 @@
+---------------------------------------------------------------------
+Benchmark                           Time             CPU   Iterations
+---------------------------------------------------------------------
+MediumSetEmpty/1                0.354 ns        0.353 ns   1000000000
+MediumSetEmpty/2                0.357 ns        0.357 ns   1000000000
+MediumSetEmpty/4                0.354 ns        0.353 ns   1000000000
+MediumSetEmpty/8                0.354 ns        0.354 ns   1000000000
+MediumSetEmpty/16               0.353 ns        0.352 ns   1000000000
+MediumSetEmpty/32               0.354 ns        0.353 ns   1000000000
+MediumSetEmpty/64               0.367 ns        0.366 ns   1000000000
+MediumSetEmpty/128              0.374 ns        0.373 ns   1000000000
+MediumSetEmpty/256              0.429 ns        0.428 ns   1000000000
+MediumSetEmpty/512              0.470 ns        0.470 ns   1000000000
+MediumSetEmpty/1024             0.464 ns        0.463 ns   1000000000
+MediumSetEmpty/2048             0.366 ns        0.366 ns   1000000000
+MediumSetEmpty/4096             0.451 ns        0.451 ns   1000000000
+MediumSetEmpty/8192             0.525 ns        0.524 ns   1000000000
+MediumSetEmpty/16384            0.366 ns        0.366 ns   1000000000
+MediumSetEmpty/32768            0.382 ns        0.382 ns   1000000000
+MediumSetEmpty/65536            0.368 ns        0.368 ns   1000000000
+MediumSetEmpty/131072           0.370 ns        0.370 ns   1000000000
+MediumSetEmpty/262144           0.345 ns        0.345 ns   1000000000
+MediumSetEmpty_BigO              0.39 (1)        0.39 (1)  
+MediumSetEmpty_RMS                 13 %            13 %    
+MediumSetSize/1                 0.334 ns        0.334 ns   1000000000
+MediumSetSize/2                 0.333 ns        0.333 ns   1000000000
+MediumSetSize/4                 0.334 ns        0.334 ns   1000000000
+MediumSetSize/8                 0.336 ns        0.336 ns   1000000000
+MediumSetSize/16                0.333 ns        0.333 ns   1000000000
+MediumSetSize/32                0.355 ns        0.355 ns   1000000000
+MediumSetSize/64                0.333 ns        0.332 ns   1000000000
+MediumSetSize/128               0.335 ns        0.335 ns   1000000000
+MediumSetSize/256               0.334 ns        0.334 ns   1000000000
+MediumSetSize/512               0.333 ns        0.333 ns   1000000000
+MediumSetSize/1024              0.341 ns        0.341 ns   1000000000
+MediumSetSize/2048              0.336 ns        0.336 ns   1000000000
+MediumSetSize/4096              0.332 ns        0.332 ns   1000000000
+MediumSetSize/8192              0.341 ns        0.341 ns   1000000000
+MediumSetSize/16384             0.333 ns        0.333 ns   1000000000
+MediumSetSize/32768             0.339 ns        0.339 ns   1000000000
+MediumSetSize/65536             0.344 ns        0.344 ns   1000000000
+MediumSetSize/131072            0.335 ns        0.334 ns   1000000000
+MediumSetSize/262144            0.437 ns        0.437 ns   1000000000
+MediumSetSize_BigO               0.34 (1)        0.34 (1)  
+MediumSetSize_RMS                   7 %             7 %    
+MediumSetMaxSize/1              0.334 ns        0.334 ns   1000000000
+MediumSetMaxSize/2              0.337 ns        0.337 ns   1000000000
+MediumSetMaxSize/4              0.336 ns        0.336 ns   1000000000
+MediumSetMaxSize/8              0.333 ns        0.333 ns   1000000000
+MediumSetMaxSize/16             0.334 ns        0.334 ns   1000000000
+MediumSetMaxSize/32             0.338 ns        0.337 ns   1000000000
+MediumSetMaxSize/64             0.357 ns        0.357 ns   1000000000
+MediumSetMaxSize/128            0.360 ns        0.360 ns   1000000000
+MediumSetMaxSize/256            0.369 ns        0.369 ns   1000000000
+MediumSetMaxSize/512            0.356 ns        0.356 ns   1000000000
+MediumSetMaxSize/1024           0.340 ns        0.339 ns   1000000000
+MediumSetMaxSize/2048           0.384 ns        0.384 ns   1000000000
+MediumSetMaxSize/4096           0.344 ns        0.344 ns   1000000000
+MediumSetMaxSize/8192           0.340 ns        0.340 ns   1000000000
+MediumSetMaxSize/16384          0.339 ns        0.339 ns   1000000000
+MediumSetMaxSize/32768          0.337 ns        0.337 ns   1000000000
+MediumSetMaxSize/65536          0.342 ns        0.342 ns   1000000000
+MediumSetMaxSize/131072         0.339 ns        0.338 ns   1000000000
+MediumSetMaxSize/262144         0.336 ns        0.336 ns   1000000000
+MediumSetMaxSize_BigO            0.34 (1)        0.34 (1)  
+MediumSetMaxSize_RMS                4 %             4 %    
+MediumSetClear/1                  621 ns          611 ns      1143208
+MediumSetClear/2                  702 ns          684 ns       941899
+MediumSetClear/4                  832 ns          803 ns       868868
+MediumSetClear/8                 1118 ns         1063 ns       664304
+MediumSetClear/16                1702 ns         1595 ns       417994
+MediumSetClear/32                2828 ns         2649 ns       266493
+MediumSetClear/64                5041 ns         4696 ns       113610
+MediumSetClear/128              12180 ns        10986 ns        80621
+MediumSetClear/256              40867 ns        39895 ns        17564
+MediumSetClear/512              84135 ns        82756 ns         9083
+MediumSetClear/1024            164280 ns       162794 ns         4312
+MediumSetClear/2048            358159 ns       356810 ns         2019
+MediumSetClear/4096            788548 ns       786807 ns          783
+MediumSetClear/8192           1714989 ns      1712358 ns          416
+MediumSetClear/16384          3034053 ns      3019437 ns          198
