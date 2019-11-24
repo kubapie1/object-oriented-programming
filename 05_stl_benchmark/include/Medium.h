@@ -47,7 +47,7 @@ namespace std {
             size_t size = 0;
             for (int i = 0; i < Medium::SIZE; i++)
             {
-                size += hash<int>{}(d.data[i] * (i+1));
+                size += d.data[i] * (i+1);
             }
             return size;
         }
