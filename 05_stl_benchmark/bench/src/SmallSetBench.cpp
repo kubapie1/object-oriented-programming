@@ -5,10 +5,15 @@
 void SmallSetEmpty(State& state)
 {
     auto N = state.range(0);
-    Small small{};
-    small.randomize();
 
-    std::set<Small> mySet{small};
+    Small small{};
+    std::set<Small> mySet{};
+
+    for (long i = 0; i < N; ++i) {
+        small.randomize();
+        mySet.insert(small);
+    }
+
     for(auto _ : state)
     {
         auto value = mySet.empty();
@@ -22,9 +27,14 @@ BENCHMARK(SmallSetEmpty)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 void SmallSetSize(State& state)
 {
     auto N = state.range(0);
+
     Small small{};
-    small.randomize();
-    std::set<Small> mySet{small};
+    std::set<Small> mySet{};
+
+    for (long i = 0; i < N; ++i) {
+        small.randomize();
+        mySet.insert(small);
+    }
 
     for(auto _ : state)
     {
@@ -39,9 +49,14 @@ BENCHMARK(SmallSetSize)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 void SmallSetMaxSize(State& state)
 {
     auto N = state.range(0);
+
     Small small{};
-    small.randomize();
-    std::set<Small> mySet{small};
+    std::set<Small> mySet{};
+
+    for (long i = 0; i < N; ++i) {
+        small.randomize();
+        mySet.insert(small);
+    }
 
     for(auto _ : state)
     {
@@ -56,12 +71,19 @@ BENCHMARK(SmallSetMaxSize)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 void SmallSetClear(State& state)
 {
     auto N = state.range(0);
+
     Small small{};
-    small.randomize();
-    std::set<Small> mySet{small};
+
+    std::set<Small> mySet{};
 
     for(auto _ : state)
     {
+        state.PauseTiming();
+        for (long i = 0; i < N; ++i) {
+            small.randomize();
+            mySet.insert(small);
+        }
+        state.ResumeTiming();
         mySet.clear();
     }
     state.SetComplexityN(N);
@@ -73,11 +95,18 @@ void SmallSetInsert(State& state)
 {
     auto N = state.range(0);
     Small small{};
-    small.randomize();
     std::set<Small> mySet{};
 
     for(auto _ : state)
     {
+        state.PauseTiming();
+        mySet.clear();
+        for (long i = 0; i < N; ++i) {
+            small.randomize();
+            mySet.insert(small);
+        }
+        state.ResumeTiming();
+
         auto value = mySet.insert(small);
         DoNotOptimize(value);
     }
@@ -90,16 +119,21 @@ void SmallSetErase(State& state)
 {
     auto N = state.range(0);
     Small small{};
-    small.randomize();
-    std::set<Small> mySet{small};
+
+    std::set<Small> mySet{};
+    for (long i = 0; i < N; ++i) {
+        small.randomize();
+        mySet.insert(small);
+    }
 
         for (auto _ : state)
         {
-            if(!mySet.empty())
-            {
-                auto value = mySet.erase(mySet.cbegin());
-                DoNotOptimize(value);
-            }
+            state.PauseTiming();
+            mySet.insert(small);
+            state.ResumeTiming();
+
+            auto value = mySet.erase(mySet.cbegin());
+            DoNotOptimize(value);
         }
     state.SetComplexityN(N);
 }
@@ -109,15 +143,19 @@ BENCHMARK(SmallSetErase)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 void SmallSetSwap(State& state)
 {
     auto N = state.range(0);
+
     Small small{};
-    small.randomize();
-
     Small small1{};
-    small1.randomize();
 
-    std::set<Small> mySet{small};
-    std::set<Small> mySet2{small1};
+    std::set<Small> mySet{};
+    std::set<Small> mySet2{};
 
+    for(long i = 0; i < N; i++) {
+        small.randomize();
+        small1.randomize();
+        mySet.insert(small);
+        mySet2.insert(small1);
+    }
     for (auto _ : state)
     {
         mySet.swap(mySet2);
@@ -130,11 +168,14 @@ BENCHMARK(SmallSetSwap)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 void SmallSetCount(State& state)
 {
     auto N = state.range(0);
+
     Small small{};
-    small.randomize();
+    std::set<Small> mySet{};
 
-    std::set<Small> mySet{small};
-
+    for (long i = 0; i < N; ++i) {
+        small.randomize();
+        mySet.insert(small);
+    }
 
     for (auto _ : state)
     {
@@ -151,10 +192,12 @@ void SmallSetFind(State& state)
 {
     auto N = state.range(0);
     Small small{};
-    small.randomize();
+    std::set<Small> mySet{};
 
-    std::set<Small> mySet{small};
-
+    for (long i = 0; i < N; ++i) {
+        small.randomize();
+        mySet.insert(small);
+    }
 
     for (auto _ : state)
     {
@@ -170,20 +213,16 @@ void SmallSetEqualRange(State& state)
 {
     auto N = state.range(0);
     Small small{};
-    Small small1{};
-    Small small2{};
+    std::set<Small> mySet{};
 
-    small.randomize();
-    small1.randomize();
-    small2.randomize();
-
-
-    std::set<Small> mySet{small, small1, small2};
-
+    for (long i = 0; i < N; ++i) {
+        small.randomize();
+        mySet.insert(small);
+    }
 
     for (auto _ : state)
     {
-        auto value = mySet.equal_range(small1);
+        auto value = mySet.equal_range(small);
         DoNotOptimize(value);
     }
     state.SetComplexityN(N);
@@ -195,16 +234,12 @@ void SmallSetLowerBound(State& state)
 {
     auto N = state.range(0);
     Small small{};
-    Small small1{};
-    Small small2{};
+    std::set<Small> mySet{};
 
-    small.randomize();
-    small1.randomize();
-    small2.randomize();
-
-
-    std::set<Small> mySet{small, small1, small2};
-
+    for (long i = 0; i < N; ++i) {
+        small.randomize();
+        mySet.insert(small);
+    }
 
     for (auto _ : state)
     {
@@ -219,21 +254,18 @@ BENCHMARK(SmallSetLowerBound)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 void SmallSetUpperBound(State& state)
 {
     auto N = state.range(0);
+
     Small small{};
-    Small small1{};
-    Small small2{};
+    std::set<Small> mySet{};
 
-    small.randomize();
-    small1.randomize();
-    small2.randomize();
-
-
-    std::set<Small> mySet{small, small1, small2};
-
+    for (long i = 0; i < N; ++i) {
+        small.randomize();
+        mySet.insert(small);
+    }
 
     for (auto _ : state)
     {
-        auto value = mySet.upper_bound(small1);
+        auto value = mySet.upper_bound(small);
         DoNotOptimize(value);
     }
     state.SetComplexityN(N);
