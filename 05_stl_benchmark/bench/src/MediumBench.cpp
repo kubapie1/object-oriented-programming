@@ -17,7 +17,7 @@ void mediumLessOperator(State& state)
     }
 }
 
-BENCHMARK(mediumLessOperator);
+BENCHMARK(mediumLessOperator)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void mediumEqualOperator(State& state)
 {
@@ -33,7 +33,7 @@ void mediumEqualOperator(State& state)
     }
 }
 
-BENCHMARK(mediumEqualOperator);
+BENCHMARK(mediumEqualOperator)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void mediumHash( State& state )
 {
@@ -42,8 +42,9 @@ void mediumHash( State& state )
 
     for(auto _ : state)
     {
-        std::hash<Medium>{}(medium1);
+        auto hash = std::hash<Medium>{}(medium1);
+        DoNotOptimize(hash);
     }
 }
 
-BENCHMARK(mediumHash);
+BENCHMARK(mediumHash)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();

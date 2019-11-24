@@ -5,8 +5,11 @@
 
 void smallLessOperator(State& state)
 {
-    Small small{'a'};
-    Small small1{'v'};
+    Small small{};
+    Small small1{};
+
+    small.randomize();
+    small1.randomize();
 
     for(auto _ : state)
     {
@@ -15,12 +18,15 @@ void smallLessOperator(State& state)
     }
 }
 
-BENCHMARK(smallLessOperator);
+BENCHMARK(smallLessOperator)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
+
 
 void smallEqualOperator(State& state)
 {
-    Small small{'c'};
-    Small small1{'c'};
+    Small small{};
+    Small small1{};
+    small.randomize();
+    small1.randomize();
 
     for( auto _ : state)
     {
@@ -29,7 +35,7 @@ void smallEqualOperator(State& state)
     }
 }
 
-BENCHMARK(smallEqualOperator);
+BENCHMARK(smallEqualOperator)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void smallHash( State& state )
 {
@@ -41,4 +47,4 @@ void smallHash( State& state )
     }
 }
 
-BENCHMARK(smallHash);
+BENCHMARK(smallHash)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();

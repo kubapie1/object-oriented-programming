@@ -17,7 +17,7 @@ void largeLessOperator(State& state)
     }
 }
 
-BENCHMARK(largeLessOperator);
+BENCHMARK(largeLessOperator)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void largeEqualOperator(State& state)
 {
@@ -33,7 +33,7 @@ void largeEqualOperator(State& state)
     }
 }
 
-BENCHMARK(largeEqualOperator);
+BENCHMARK(largeEqualOperator)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();
 
 void largeHash( State& state )
 {
@@ -42,8 +42,9 @@ void largeHash( State& state )
     large.randomize();
 
     for(auto _ : state) {
-        std::hash<Large>{}(large);
+        auto hash = std::hash<Large>{}(large);
+        DoNotOptimize(hash);
     }
 }
 
-BENCHMARK(largeHash);
+BENCHMARK(largeHash)->RangeMultiplier(2)->Range(1,1<<18)->Complexity();

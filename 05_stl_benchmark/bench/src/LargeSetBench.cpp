@@ -9,10 +9,12 @@ void LargeSetEmpty(State& state)
     Large large{};
     std::set<Large> mySet{};
 
+
     for (long i = 0; i < N; ++i) {
         large.randomize();
         mySet.insert(large);
     }
+
 
     for(auto _ : state)
     {
@@ -85,6 +87,7 @@ void LargeSetClear(State& state)
         }
         state.ResumeTiming();
         mySet.clear();
+        ClobberMemory();
     }
     state.SetComplexityN(N);
 }
@@ -104,6 +107,7 @@ void LargeSetInsert(State& state)
         for (long i = 0; i < N; ++i) {
             large.randomize();
             mySet.insert(large);
+            ClobberMemory();
         }
         state.ResumeTiming();
 
