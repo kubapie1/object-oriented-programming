@@ -8,7 +8,7 @@ void smallForwardListFront(State& state)
     std::forward_list<Small> forwardList{};
     Small small{};
 
-    for (int i = 0; i < N; i++) {
+    for (long i = 0; i < N; i++) {
         small.randomize();
         forwardList.push_front(small);
     }
@@ -29,7 +29,7 @@ void smallForwardListEmpty(State& state)
     std::forward_list<Small> forwardList{};
     Small small{};
 
-    for (int i = 0; i < N; i++) {
+    for (long i = 0; i < N; i++) {
         small.randomize();
         forwardList.push_front(small);
     }
@@ -50,7 +50,7 @@ void smallForwardListMaxSize(State& state)
     std::forward_list<Small> forwardList{};
     Small small{};
 
-    for (int i = 0; i < N; i++) {
+    for (long i = 0; i < N; i++) {
         small.randomize();
         forwardList.push_front(small);
     }
@@ -71,12 +71,18 @@ void smallForwardListClear(State& state)
     std::forward_list<Small> forwardList{};
     Small small{};
 
-    for (int i = 0; i < N; i++) {
-        small.randomize();
-        forwardList.push_front(small);
-    }
+
     for( auto _ : state)
     {
+        state.PauseTiming();
+
+        for (long i = 0; i < N; i++) {
+            small.randomize();
+            forwardList.push_front(small);
+        }
+
+        state.ResumeTiming();
+
         forwardList.clear();
     }
     state.SetComplexityN(N);
@@ -88,19 +94,22 @@ void smallForwardListInsertAfter(State& state)
 {
     auto N = state.range(0);
     std::forward_list<Small> forwardList{};
+
     Small small{};
-
-    for (int i = 0; i < N; i++) {
-        small.randomize();
-        forwardList.push_front(small);
-    }
-
     Small small2{};
-    small2.randomize();
 
-    auto beginIt = forwardList.begin();
     for( auto _ : state)
     {
+        state.PauseTiming();
+        forwardList.clear();
+        for (long i = 0; i < N; i++) {
+            small.randomize();
+            forwardList.push_front(small);
+        }
+        auto beginIt = forwardList.begin();
+        small2.randomize();
+        state.ResumeTiming();
+
         forwardList.insert_after(beginIt, small2);
     }
     state.SetComplexityN(N);
@@ -114,15 +123,19 @@ void smallForwardListEraseAfter(State& state)
     std::forward_list<Small> forwardList{};
     Small small{};
 
-    for (int i = 0; i < N; i++) {
-        small.randomize();
-        forwardList.push_front(small);
-    }
 
     for( auto _ : state)
     {
-        if( !forwardList.empty() )
-            forwardList.erase_after(forwardList.before_begin());
+        state.PauseTiming();
+        for (long i = 0; i < N; i++) {
+            small.randomize();
+            forwardList.push_front(small);
+        }
+        small.randomize();
+        forwardList.push_front(small);
+        state.ResumeTiming();
+
+        forwardList.erase_after(forwardList.before_begin());
     }
     state.SetComplexityN(N);
 }
@@ -131,21 +144,22 @@ BENCHMARK(smallForwardListEraseAfter)->RangeMultiplier(2)->Range(1,1<<18)->Compl
 
 void smallForwardListPushFront(State& state)
 {
-    Small small1{};
-    small1.randomize();
-
     auto N = state.range(0);
     std::forward_list<Small> forwardList{};
     Small small{};
 
-    for (int i = 0; i < N; i++) {
-        small.randomize();
-        forwardList.push_front(small);
-    }
-
     for( auto _ : state)
     {
-        forwardList.push_front(small1);
+        state.PauseTiming();
+        forwardList.clear();
+        for (long i = 0; i < N; i++) {
+            small.randomize();
+            forwardList.push_front(small);
+        }
+        small.randomize();
+        state.ResumeTiming();
+
+        forwardList.push_front(small);
     }
     state.SetComplexityN(N);
 }
@@ -158,13 +172,15 @@ void smallForwardListPopFront(State& state)
     std::forward_list<Small> forwardList{};
     Small small{};
 
-    for (int i = 0; i < N; i++) {
-        small.randomize();
-        forwardList.push_front(small);
-    }
 
     for( auto _ : state)
     {
+        state.PauseTiming();
+        for (long i = 0; i < N; i++) {
+            small.randomize();
+            forwardList.push_front(small);
+        }
+        state.ResumeTiming();
         if(!forwardList.empty())
             forwardList.pop_front();
     }
@@ -180,13 +196,15 @@ void smallForwardListResize(State& state)
     std::forward_list<Small> forwardList{};
     Small small{};
 
-    for (int i = 0; i < N; i++) {
-        small.randomize();
-        forwardList.push_front(small);
-    }
-
     for( auto _ : state)
     {
+        state.PauseTiming();
+        forwardList.clear();
+        for (long i = 0; i < N; i++) {
+            small.randomize();
+            forwardList.push_front(small);
+        }
+        state.ResumeTiming();
         forwardList.resize(5);
     }
     state.SetComplexityN(N);
@@ -225,15 +243,21 @@ void smallForwardListMerge(State& state)
     std::forward_list<Small> forwardList2{};
     Small small{};
 
-    for (int i = 0; i < N; i++) {
-        small.randomize();
-        forwardList.push_front(small);
-        small.randomize();
-        forwardList2.push_front(small);
-    }
 
     for( auto _ : state)
     {
+        state.PauseTiming();
+        forwardList.clear();
+        forwardList2.clear();
+        for (int i = 0; i < N; i++) {
+            small.randomize();
+            forwardList.push_front(small);
+            small.randomize();
+            forwardList2.push_front(small);
+        }
+
+
+        state.ResumeTiming();
         forwardList.merge(forwardList2);
     }
     state.SetComplexityN(N);
@@ -246,19 +270,26 @@ void smallForwardListSpliceAfter(State& state)
 {
     auto N = state.range();
     Small small{}, small2{};
-    Small small1{}, small3{};
 
-    small.randomize();
-    small1.randomize();
-    small2.randomize();
-    small3.randomize();
 
-    std::forward_list<Small> firstForwardList{small, small2};
-    std::forward_list<Small> s2{small1, small3};
+    std::forward_list<Small> firstForwardList;
+    std::forward_list<Small> s2;
 
 
     for( auto _ : state)
     {
+        state.PauseTiming();
+
+        firstForwardList.clear();
+        s2.clear();
+        for (long i = 0; i < N; i++) {
+            small.randomize();
+            firstForwardList.push_front(small);
+            small2.randomize();
+            s2.push_front(small2);
+        }
+        state.ResumeTiming();
+
         firstForwardList.splice_after(firstForwardList.cbegin(), s2, s2.cbegin(), s2.cend());
     }
     state.SetComplexityN(N);
@@ -273,15 +304,20 @@ void smallForwardListRemove(State& state)
     std::forward_list<Small> forwardList{};
     Small small{};
 
-    for (int i = 0; i < N; i++) {
-        small.randomize();
-        forwardList.push_front(small);
-    }
+
 
     for( auto _ : state)
     {
-        if(!forwardList.empty())
-            forwardList.remove(small);
+        state.PauseTiming();
+
+        forwardList.clear();
+        for (long i = 0; i < N; i++) {
+            small.randomize();
+            forwardList.push_front(small);
+        }
+        state.ResumeTiming();
+
+        forwardList.remove(small);
     }
     state.SetComplexityN(N);
 }
@@ -292,18 +328,25 @@ BENCHMARK(smallForwardListRemove)->RangeMultiplier(2)->Range(1,1<<18)->Complexit
 void smallForwardListRemoveIf(State& state)
 {
     auto N = state.range(0);
-    Small small{'a'};
-    Small small1{'g'};
+   Small small{};
 
-    std::forward_list<Small> firstForwardList{small, small1};
+    std::forward_list<Small> forwardList{};
 
     for( auto _ : state)
     {
-        firstForwardList.remove_if([](Small n)
+        state.PauseTiming();
+        forwardList.clear();
+        for (long i = 0; i < N; ++i) {
+            small.randomize();
+            forwardList.push_front(small);
+        }
+        state.ResumeTiming();
+        forwardList.remove_if([](Small n)
         {
             Small x{'g'};
             return n < x;
         });
+
     }
     state.SetComplexityN(N);
 }
@@ -319,13 +362,12 @@ void smallForwardListReverse(State& state)
     Small small{};
     Small small2{};
 
-    for (int i = 0; i < N; i++) {
+    for (long i = 0; i < N; i++) {
         small.randomize();
         forwardList.push_front(small);
         small2.randomize();
         forwardList.push_front(small2);
     }
-
 
     for( auto _ : state)
     {
@@ -340,15 +382,19 @@ void smallForwardListUnique(State& state)
 {
     auto N = state.range(0);
 
-    Small small{'a'};
-    Small small1{'a'};
-
-
-    std::forward_list<Small> firstForwardList{small, small1};
+    Small small{};
+    std::forward_list<Small> firstForwardList{};
 
 
     for( auto _ : state)
     {
+        state.PauseTiming();
+        firstForwardList.clear();
+        for (long i = 0; i < N; i++) {
+            small.randomize();
+            firstForwardList.push_front(small);
+        }
+        state.ResumeTiming();
         firstForwardList.unique();
     }
     state.SetComplexityN(N);
@@ -362,18 +408,16 @@ void smallForwardListSort(State& state)
     std::forward_list<Small> forwardList{};
 
     Small small{};
-    Small small2{};
-
-    for (int i = 0; i < N; i++) {
-        small.randomize();
-        forwardList.push_front(small);
-        small2.randomize();
-        forwardList.push_front(small2);
-    }
-
 
     for( auto _ : state)
     {
+        state.PauseTiming();
+        forwardList.clear();
+        for (int i = 0; i < N; i++) {
+            small.randomize();
+            forwardList.push_front(small);
+        }
+        state.ResumeTiming();
         forwardList.sort();
     }
     state.SetComplexityN(N);

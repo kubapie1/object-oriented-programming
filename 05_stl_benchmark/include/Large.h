@@ -50,7 +50,7 @@ namespace std {
             size_t size=0;
             for (int i = 0; i < Large::SIZE; i++)
             {
-                hash<double>{}(d.data[i] * (i+1));
+                //hash<double>{}(d.data[i] * (i+1));
                 size += d.data[i] * (i+1);
             }
             return size;
