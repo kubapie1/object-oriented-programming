@@ -1,0 +1,353 @@
+{
+  "context": {
+    "date": "2019-11-24 19:59:06",
+    "host_name": "student-pc",
+    "executable": "./05_stl_benchmark_bench",
+    "num_cpus": 4,
+    "mhz_per_cpu": 2712,
+    "cpu_scaling_enabled": false,
+    "caches": [
+      {
+        "type": "Data",
+        "level": 1,
+        "size": 32000,
+        "num_sharing": 1
+      },
+      {
+        "type": "Instruction",
+        "level": 1,
+        "size": 32000,
+        "num_sharing": 1
+      },
+      {
+        "type": "Unified",
+        "level": 2,
+        "size": 256000,
+        "num_sharing": 1
+      },
+      {
+        "type": "Unified",
+        "level": 3,
+        "size": 3072000,
+        "num_sharing": 1
+      }
+    ],
+    "load_avg": [1.3,1.22,1.66],
+    "library_build_type": "release"
+  },
+  "benchmarks": [
+    {
+      "name": "LargeSetEmpty/1",
+      "run_name": "LargeSetEmpty/1",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.4953371200026595e-01,
+      "cpu_time": 3.4934663800000004e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetEmpty/2",
+      "run_name": "LargeSetEmpty/2",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.9760256299996399e-01,
+      "cpu_time": 3.9739689900000008e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetEmpty/4",
+      "run_name": "LargeSetEmpty/4",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.4954757400009839e-01,
+      "cpu_time": 3.4935103800000022e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetEmpty/8",
+      "run_name": "LargeSetEmpty/8",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.5138988599965160e-01,
+      "cpu_time": 3.5102369100000003e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetEmpty/16",
+      "run_name": "LargeSetEmpty/16",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.5519526799998857e-01,
+      "cpu_time": 3.5501782099999968e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetEmpty/32",
+      "run_name": "LargeSetEmpty/32",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.4676947199977803e-01,
+      "cpu_time": 3.4592829200000003e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetEmpty/64",
+      "run_name": "LargeSetEmpty/64",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.5605827600011253e-01,
+      "cpu_time": 3.5518351799999959e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetEmpty_BigO",
+      "run_name": "LargeSetEmpty",
+      "run_type": "aggregate",
+      "repetitions": 0,
+      "threads": 1,
+      "aggregate_name": "BigO",
+      "cpu_coefficient": 3.5760684242857133e-01,
+      "real_coefficient": 3.5801382157140843e-01,
+      "big_o": "(1)",
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetEmpty_RMS",
+      "run_name": "LargeSetEmpty",
+      "run_type": "aggregate",
+      "repetitions": 0,
+      "threads": 1,
+      "aggregate_name": "RMS",
+      "rms": 4.6214927034872413e-02
+    },
+    {
+      "name": "LargeSetSize/1",
+      "run_name": "LargeSetSize/1",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3861084399995889e-01,
+      "cpu_time": 3.3775326700000008e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetSize/2",
+      "run_name": "LargeSetSize/2",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3618071899991264e-01,
+      "cpu_time": 3.3530853699999952e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetSize/4",
+      "run_name": "LargeSetSize/4",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3782039699963207e-01,
+      "cpu_time": 3.3688525700000049e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetSize/8",
+      "run_name": "LargeSetSize/8",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.4334450899996227e-01,
+      "cpu_time": 3.4248306000000106e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetSize/16",
+      "run_name": "LargeSetSize/16",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3890929599965602e-01,
+      "cpu_time": 3.3808291000000068e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetSize/32",
+      "run_name": "LargeSetSize/32",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3616101899997375e-01,
+      "cpu_time": 3.3521901399999976e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetSize/64",
+      "run_name": "LargeSetSize/64",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.4225006699989535e-01,
+      "cpu_time": 3.4136068799999997e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetSize_BigO",
+      "run_name": "LargeSetSize",
+      "run_type": "aggregate",
+      "repetitions": 0,
+      "threads": 1,
+      "aggregate_name": "BigO",
+      "cpu_coefficient": 3.3815610471428592e-01,
+      "real_coefficient": 3.3903955014271298e-01,
+      "big_o": "(1)",
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetSize_RMS",
+      "run_name": "LargeSetSize",
+      "run_type": "aggregate",
+      "repetitions": 0,
+      "threads": 1,
+      "aggregate_name": "RMS",
+      "rms": 7.7041552599479528e-03
+    },
+    {
+      "name": "LargeSetMaxSize/1",
+      "run_name": "LargeSetMaxSize/1",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3689565599979687e-01,
+      "cpu_time": 3.3608624099999851e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetMaxSize/2",
+      "run_name": "LargeSetMaxSize/2",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3528023899998516e-01,
+      "cpu_time": 3.3439350399999945e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetMaxSize/4",
+      "run_name": "LargeSetMaxSize/4",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3890545499980362e-01,
+      "cpu_time": 3.3752000100000146e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetMaxSize/8",
+      "run_name": "LargeSetMaxSize/8",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3371127100008380e-01,
+      "cpu_time": 3.3283966899999839e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetMaxSize/16",
+      "run_name": "LargeSetMaxSize/16",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3420544499995231e-01,
+      "cpu_time": 3.3328111899999868e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetMaxSize/32",
+      "run_name": "LargeSetMaxSize/32",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3445358600010877e-01,
+      "cpu_time": 3.3358876200000154e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetMaxSize/64",
+      "run_name": "LargeSetMaxSize/64",
+      "run_type": "iteration",
+      "repetitions": 0,
+      "repetition_index": 0,
+      "threads": 1,
+      "iterations": 1000000000,
+      "real_time": 3.3719081499975800e-01,
+      "cpu_time": 3.3693245100000269e-01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetMaxSize_BigO",
+      "run_name": "LargeSetMaxSize",
+      "run_type": "aggregate",
+      "repetitions": 0,
+      "threads": 1,
+      "aggregate_name": "BigO",
+      "cpu_coefficient": 3.3494882100000012e-01,
+      "real_coefficient": 3.3580606671421270e-01,
+      "big_o": "(1)",
+      "time_unit": "ns"
+    },
+    {
+      "name": "LargeSetMaxSize_RMS",
+      "run_name": "LargeSetMaxSize",
+      "run_type": "aggregate",
+      "repetitions": 0,
+      "threads": 1,
+      "aggregate_name": "RMS",
+      "rms": 5.1990094294720708e-03
+    }
