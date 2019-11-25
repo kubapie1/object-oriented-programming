@@ -1,0 +1,66 @@
+--------------------------------------------------------------------
+Benchmark                          Time             CPU   Iterations
+--------------------------------------------------------------------
+smallLessOperator/1            0.333 ns        0.332 ns   1000000000
+smallLessOperator/2            0.335 ns        0.335 ns   1000000000
+smallLessOperator/4            0.338 ns        0.337 ns   1000000000
+smallLessOperator/8            0.337 ns        0.337 ns   1000000000
+smallLessOperator/16           0.334 ns        0.334 ns   1000000000
+smallLessOperator/32           0.331 ns        0.330 ns   1000000000
+smallLessOperator/64           0.330 ns        0.330 ns   1000000000
+smallLessOperator/128          0.331 ns        0.330 ns   1000000000
+smallLessOperator/256          0.330 ns        0.329 ns   1000000000
+smallLessOperator/512          0.330 ns        0.330 ns   1000000000
+smallLessOperator/1024         0.330 ns        0.329 ns   1000000000
+smallLessOperator/2048         0.329 ns        0.329 ns   1000000000
+smallLessOperator/4096         0.330 ns        0.330 ns   1000000000
+smallLessOperator/8192         0.331 ns        0.330 ns   1000000000
+smallLessOperator/16384        0.330 ns        0.330 ns   1000000000
+smallLessOperator/32768        0.331 ns        0.331 ns   1000000000
+smallLessOperator/65536        0.330 ns        0.329 ns   1000000000
+smallLessOperator/131072       0.330 ns        0.330 ns   1000000000
+smallLessOperator/262144       0.331 ns        0.330 ns   1000000000
+smallLessOperator_BigO          0.33 (1)        0.33 (1)  
+smallLessOperator_RMS              1 %             1 %    
+mediumLessOperator/1            1.13 ns         1.13 ns    624409442
+mediumLessOperator/2            1.16 ns         1.15 ns    623389851
+mediumLessOperator/4            1.30 ns         1.26 ns    608617574
+mediumLessOperator/8            1.16 ns         1.16 ns    463784248
+mediumLessOperator/16           1.19 ns         1.19 ns    623803928
+mediumLessOperator/32           1.17 ns         1.17 ns    622132591
+mediumLessOperator/64           1.18 ns         1.18 ns    588929464
+mediumLessOperator/128          1.28 ns         1.28 ns    602024731
+mediumLessOperator/256          1.13 ns         1.13 ns    565265388
+mediumLessOperator/512          1.16 ns         1.16 ns    625650666
+mediumLessOperator/1024         1.14 ns         1.14 ns    620688636
+mediumLessOperator/2048         1.14 ns         1.13 ns    615338883
+mediumLessOperator/4096         1.17 ns         1.17 ns    627533442
+mediumLessOperator/8192         1.12 ns         1.12 ns    616239023
+mediumLessOperator/16384        1.12 ns         1.12 ns    615109252
+mediumLessOperator/32768        1.14 ns         1.14 ns    620865188
+mediumLessOperator/65536        1.14 ns         1.13 ns    620734479
+mediumLessOperator/131072       1.13 ns         1.12 ns    609822567
+mediumLessOperator/262144       1.14 ns         1.13 ns    630807524
+mediumLessOperator_BigO         1.16 (1)        1.16 (1)  
+mediumLessOperator_RMS             4 %             4 %    
+largeLessOperator/1             1.34 ns         1.34 ns    523436390
+largeLessOperator/2             1.36 ns         1.34 ns    523612422
+largeLessOperator/4             1.35 ns         1.34 ns    521606541
+largeLessOperator/8             1.35 ns         1.34 ns    521539830
+largeLessOperator/16            1.44 ns         1.44 ns    517402183
+largeLessOperator/32            1.35 ns         1.34 ns    518729480
+largeLessOperator/64            1.35 ns         1.35 ns    521395172
+largeLessOperator/128           1.35 ns         1.34 ns    517652245
+largeLessOperator/256           1.35 ns         1.34 ns    523985771
+largeLessOperator/512           1.35 ns         1.34 ns    497102471
+largeLessOperator/1024          1.35 ns         1.34 ns    522705139
+largeLessOperator/2048          1.35 ns         1.34 ns    523144183
+largeLessOperator/4096          1.44 ns         1.43 ns    502475911
+largeLessOperator/8192          1.35 ns         1.35 ns    513446892
+largeLessOperator/16384         1.35 ns         1.34 ns    521047866
+largeLessOperator/32768         1.35 ns         1.34 ns    519491584
+largeLessOperator/65536         1.35 ns         1.34 ns    522133940
+largeLessOperator/131072        1.35 ns         1.35 ns    511811588
+largeLessOperator/262144        1.34 ns         1.34 ns    522374872
+largeLessOperator_BigO          1.36 (1)        1.35 (1)  
+largeLessOperator_RMS              2 %             2 %    

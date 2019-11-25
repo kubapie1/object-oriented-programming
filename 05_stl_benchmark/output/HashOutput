@@ -1,0 +1,66 @@
+------------------------------------------------------------
+Benchmark                  Time             CPU   Iterations
+------------------------------------------------------------
+smallHash/1            0.333 ns        0.331 ns   1000000000
+smallHash/2            0.329 ns        0.329 ns   1000000000
+smallHash/4            0.334 ns        0.330 ns   1000000000
+smallHash/8            0.330 ns        0.329 ns   1000000000
+smallHash/16           0.330 ns        0.329 ns   1000000000
+smallHash/32           0.335 ns        0.333 ns   1000000000
+smallHash/64           0.334 ns        0.334 ns   1000000000
+smallHash/128          0.330 ns        0.330 ns   1000000000
+smallHash/256          0.333 ns        0.331 ns   1000000000
+smallHash/512          0.329 ns        0.329 ns   1000000000
+smallHash/1024         0.329 ns        0.329 ns   1000000000
+smallHash/2048         0.331 ns        0.330 ns   1000000000
+smallHash/4096         0.330 ns        0.329 ns   1000000000
+smallHash/8192         0.331 ns        0.331 ns   1000000000
+smallHash/16384        0.363 ns        0.363 ns   1000000000
+smallHash/32768        0.329 ns        0.329 ns   1000000000
+smallHash/65536        0.331 ns        0.331 ns   1000000000
+smallHash/131072       0.350 ns        0.349 ns   1000000000
+smallHash/262144       0.330 ns        0.330 ns   1000000000
+smallHash_BigO          0.33 (1)        0.33 (1)  
+smallHash_RMS              2 %             2 %    
+mediumHash/1             112 ns          112 ns      6002253
+mediumHash/2             112 ns          112 ns      6088437
+mediumHash/4             120 ns          120 ns      6226687
+mediumHash/8             113 ns          113 ns      6267490
+mediumHash/16            119 ns          119 ns      6212549
+mediumHash/32            115 ns          115 ns      6234537
+mediumHash/64            111 ns          111 ns      6247935
+mediumHash/128           112 ns          112 ns      6199846
+mediumHash/256           113 ns          113 ns      6220904
+mediumHash/512           113 ns          112 ns      6278897
+mediumHash/1024          113 ns          113 ns      6250696
+mediumHash/2048          112 ns          112 ns      6234728
+mediumHash/4096          112 ns          112 ns      6085018
+mediumHash/8192          112 ns          112 ns      6235374
+mediumHash/16384         113 ns          113 ns      6281671
+mediumHash/32768         113 ns          113 ns      6253650
+mediumHash/65536         113 ns          113 ns      5746826
+mediumHash/131072        113 ns          113 ns      6204722
+mediumHash/262144        113 ns          113 ns      6221962
+mediumHash_BigO       113.33 (1)      113.24 (1)  
+mediumHash_RMS             2 %             2 %    
+largeHash/1           746864 ns       743220 ns          940
+largeHash/2           750092 ns       743098 ns          942
+largeHash/4           744143 ns       743788 ns          942
+largeHash/8           741370 ns       740988 ns          938
+largeHash/16          742878 ns       741938 ns          926
+largeHash/32          743474 ns       743055 ns          942
+largeHash/64          749631 ns       748907 ns          940
+largeHash/128         742308 ns       741930 ns          940
+largeHash/256         741859 ns       741464 ns          935
+largeHash/512         742480 ns       741886 ns          941
+largeHash/1024        742076 ns       741652 ns          946
+largeHash/2048        742045 ns       741647 ns          939
+largeHash/4096        748375 ns       748002 ns          942
+largeHash/8192        759301 ns       758834 ns          923
+largeHash/16384       742337 ns       741938 ns          941
+largeHash/32768       741908 ns       741520 ns          942
+largeHash/65536       742072 ns       741615 ns          938
+largeHash/131072      749093 ns       748696 ns          941
+largeHash/262144      741701 ns       741314 ns          933
+largeHash_BigO     744947.79 (1)   743973.33 (1)  
+largeHash_RMS              1 %             1 %    

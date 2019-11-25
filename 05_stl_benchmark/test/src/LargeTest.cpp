@@ -110,3 +110,42 @@ TEST(LargeTest, Clear) {
 
 
 // TODO: Add tests for your operators implementation!
+
+TEST( LargeTest, LessThanOperator)
+{
+    Large l1 = { 1.0, 2.0, 3.0};
+    Large l2 = {1.0, 2.0, 2.0};
+    ASSERT_EQ(true, l2<l1);
+}
+
+TEST( LargeTest, EqualOperator)
+{
+    Large l1 = { 5.0, 2.0,3.0};
+    Large l2 = { 5.0, 2.0,3.0, 5.0};
+
+    ASSERT_EQ(false, l1 == l2);
+}
+
+TEST(LargeTest, HashOperator)
+{
+/*    std::unordered_set<Large> unorderedSet{};
+
+    Large l1{};
+    Large l2{};
+    for (int i = 0; i < Large::SIZE; ++i)
+    {
+        l1.data[i] = i + 1.5;
+        l2.data[i] = (double)i + 2.5;
+    }
+
+    unorderedSet.insert(l1);
+    ASSERT_EQ(1u, unorderedSet.size());
+    ASSERT_EQ(l1, *unorderedSet.cbegin());
+    unorderedSet.insert(l2);
+    ASSERT_EQ(2u, unorderedSet.size());
+*/
+    Large l1{1.0,2.0,3.0};
+
+    auto largeHash = std::hash<Large>{}(l1);
+    ASSERT_EQ(14.0, largeHash);
+}

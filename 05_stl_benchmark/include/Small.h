@@ -39,7 +39,9 @@ namespace std {
         std::size_t operator()(const Small &d) const {
 
             // TODO: Implement me!
+            //return std::hash<char>{}(d.data[0]);
             return d.data[0];
+
         }
     };
 }

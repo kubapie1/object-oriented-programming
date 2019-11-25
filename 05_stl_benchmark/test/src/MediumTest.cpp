@@ -127,8 +127,9 @@ TEST( MediumTest, EqualOperator )
 
 TEST( MediumTest, HashOperator )
 {
-    Medium medium{15, 21, 33, 54,
-                  58, 67, 76, 82, 95};
-    Medium testMedium{};
-    ASSERT_EQ( true, testMedium == medium );
+
+    Medium md1{1,2,3};
+
+    auto mediumHash = std::hash<Medium>{}(md1);
+    ASSERT_EQ(14, mediumHash);
 }

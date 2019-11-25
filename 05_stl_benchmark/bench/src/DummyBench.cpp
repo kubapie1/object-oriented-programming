@@ -1,6 +1,6 @@
 #include "Dummy.h"
 #include "BenchIncludes.h"
-
+/*
 static void Dummy_Integrate(State& state) {
 
     Dummy dummy{};
@@ -17,3 +17,4 @@ static void Dummy_Integrate(State& state) {
 
 BENCHMARK(Dummy_Integrate)->RangeMultiplier(2)->Range(1<<5, 1<<18)->Complexity();
 //to zakres w jakim benchmark sie odpala. Zaczynamy od 2 i lecimy potegami 2
+ */
