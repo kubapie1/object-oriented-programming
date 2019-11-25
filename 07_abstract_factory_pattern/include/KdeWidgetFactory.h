@@ -1,8 +1,9 @@
 #pragma once
 
 
+#include "WidgetFactory.h"
 
-class KdeWidgetFactory
+class KdeWidgetFactory : public WidgetFactory
 {
 private:
     int kdeVersion;

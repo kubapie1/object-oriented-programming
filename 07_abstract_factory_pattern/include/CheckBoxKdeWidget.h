@@ -1,6 +1,8 @@
 #pragma once
 
-class CheckBoxKdeWidget
+#include "Widget.h"
+
+class CheckBoxKdeWidget : public Widget
 {
 private:
     int kdeVersion;

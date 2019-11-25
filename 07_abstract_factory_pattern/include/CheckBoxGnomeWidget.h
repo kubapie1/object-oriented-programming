@@ -1,8 +1,9 @@
 #pragma once
 
 
+#include "Widget.h"
 
-class CheckBoxGnomeWidget
+class CheckBoxGnomeWidget : public Widget
 {
 private:
     int gnomeVersion;

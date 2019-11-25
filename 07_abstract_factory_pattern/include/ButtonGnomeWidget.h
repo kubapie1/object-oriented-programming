@@ -1,8 +1,8 @@
 #pragma once
 
+#include "Widget.h"
 
-
-class ButtonGnomeWidget
+class ButtonGnomeWidget : public Widget
 {
 private:
     int gnomeVersion;

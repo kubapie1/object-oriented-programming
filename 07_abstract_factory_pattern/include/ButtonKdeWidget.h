@@ -1,6 +1,8 @@
 #pragma once
 
-class ButtonKdeWidget
+#include "Widget.h"
+
+class ButtonKdeWidget : public Widget
 {
 private:
     int kdeVersion;

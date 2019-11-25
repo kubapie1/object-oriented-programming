@@ -1,6 +1,8 @@
 #pragma once
 
-class GnomeWidgetFactory
+#include "WidgetFactory.h"
+
+class GnomeWidgetFactory : public WidgetFactory
 {
 private:
     int gnomeVersion;
