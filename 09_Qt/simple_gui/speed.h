@@ -14,6 +14,10 @@ signals:
 
 public slots:
     void onDisplacementChanged(double v);
+
+private:
+    double currentDisplacement = 0;
+
 };
 
 #endif // SPEED_H

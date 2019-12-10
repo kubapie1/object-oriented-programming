@@ -8,6 +8,8 @@ Speed::Speed(QObject *parent) : QObject(parent)
 
 void Speed::onDisplacementChanged(double v)
 {
+    double lastDispalcement = currentDisplacement;
+    currentDisplacement = v;
     qDebug() << "[Speed]Displacement changed to: " << v ;
-    emit changed(v);
+    emit changed(currentDisplacement - lastDispalcement);
 }
