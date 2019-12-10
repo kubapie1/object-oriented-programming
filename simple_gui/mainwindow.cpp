@@ -14,16 +14,16 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     connect(displacement, SIGNAL(changed(double)),
-            speed, SLOT(onDisplacementChange(double)));
+            speed, SLOT(onDisplacementChanged(double)));
     connect(speed, SIGNAL(changed(double)),
-            acceleration, SIGNAL(onSpeedChange(double)));
+            acceleration, SLOT(onSpeedChanged(double)));
 
     ui->setupUi(this);
 
     connect(speed, SIGNAL(changed(double)),
             ui->lcdNumberSpeed, SLOT(display(double)));
-    connect(speed, SIGNAL(changed(double)),
-            ui->lcdNumberAcceleration, SIGNAL(display(double)));
+    connect(acceleration, SIGNAL(changed(double)),
+            ui->lcdNumberAcceleration, SLOT(display(double)));
 
 }
 
@@ -38,7 +38,3 @@ void MainWindow::on_pushButton_clicked()
     displacement->set(value);
 }
 
-void MainWindow::on_pushButton_pressed()
-{
-
-}
