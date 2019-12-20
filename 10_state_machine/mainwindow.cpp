@@ -50,8 +50,8 @@ MainWindow::MainWindow(QWidget *parent) :
     auto errorState = new QState(unlockedState);
     auto viewState = new QState(unlockedState);
     auto editState = new QState(unlockedState);
-    auto lockedState = new QState(stateMachine);
     auto saveState = new QState(unlockedState);
+    auto lockedState = new QState(stateMachine);
 
     unlockedState->assignProperty(ui->pbToggle, "text", "Lock");
     unlockedState->assignProperty(ui->pbOpen, "enabled", true);
@@ -60,8 +60,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     startupState->assignProperty(ui->pbOpen, "enabled", true);
     startupState->assignProperty(ui->pbSave, "enabled", false);
-    startupState->assignProperty(ui->teText, "enabled", false);
     startupState->assignProperty(ui->teText, "palceholderText", "Open file to start editing...");
+    startupState->assignProperty(ui->teText, "enabled", false);
+
 
     errorState->assignProperty(ui->pbOpen, "enabled", true);
     errorState->assignProperty(ui->pbSave, "enabled", false);
@@ -95,15 +96,16 @@ MainWindow::MainWindow(QWidget *parent) :
     saveState->addTransition(this, SIGNAL(error()), errorState);
 
     errorState->addTransition(ui->pbOpen, SIGNAL(clicked(bool)), openState);
-    unlockedState->addTransition(ui->pbToggle, SIGNAL(clicked(bool)), lockedState);
 
-    lockedState->addTransition(ui->pbToggle,SIGNAL(clicked(bool)), errorState);
+    unlockedState->addTransition(ui->pbToggle, SIGNAL(clicked(bool)), lockedState);
+    lockedState->addTransition(ui->pbToggle, SIGNAL(clicked(bool)), unlockedState);
 
     connect(openState, SIGNAL(entered()),this, SLOT(open()));
     connect(saveState, SIGNAL(entered()),this, SLOT(save()));
 
     stateMachine->setInitialState(unlockedState);
     unlockedState->setInitialState(startupState);
+
     stateMachine->start();
 }
 
@@ -143,14 +145,13 @@ void MainWindow::save()
         emit error();
     else {
         QFile file(fileName);
-        if(!file.open(QIODevice::ReadWrite| QIODevice::Append |QFile::Text)){
+        if(!file.open(QIODevice::WriteOnly |QFile::Text)){
             emit error();
         }
         else{
-            //ui->teText->setText(file.readAll());
-
-            QTextStream stream( &file );
-
+            QTextStream stream(&file);
+            stream << ui->teText->toPlainText();
+            file.close();
             emit saved();
         }
     }
