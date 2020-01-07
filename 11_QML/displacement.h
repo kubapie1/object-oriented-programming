@@ -6,10 +6,16 @@
 class Displacement : public QObject
 {
     Q_OBJECT
+
+    Q_PROPERTY(double value
+               READ getValue
+               WRITE set
+               NOTIFY changed)
 public:
     explicit Displacement(QObject *parent = nullptr);
 
-    void set(double v);
+    Q_INVOKABLE void set(double v);
+    Q_INVOKABLE double getValue() const;
 
 signals:
     void changed(double v);
